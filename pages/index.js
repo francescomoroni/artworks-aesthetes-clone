@@ -66,7 +66,7 @@ export default function Home() {
           {operas.map((opera) => (
             <div key={opera.id}>
               <a
-                href={`https://artworks-aesthetes-clone.vercel.app ${opera.linkPage}`}
+                href={`https://artworks-aesthetes-clone.vercel.app${opera.linkPage}`}
               >
                 <img
                   src={opera.image}
@@ -77,7 +77,7 @@ export default function Home() {
                 <p className="sm:text-xl">{opera.artist}</p>
                 <p className="font-bold sm:text-xl">{opera.title}</p>
                 <a
-                  href={`https://artworks-aesthetes-clone.vercel.app ${opera.linkPage}`}
+                  href={`https://artworks-aesthetes-clone.vercel.app${opera.linkPage}`}
                 >
                   {" "}
                   <p className="py-2 mt-4 tracking-widest border border-white rounded-full cursor-pointer hover:underline">
