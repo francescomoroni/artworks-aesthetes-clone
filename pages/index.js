@@ -14,29 +14,29 @@ export default function Home() {
       title: "Lezardrieux",
       artist: "Paul Signac",
       image: "./signac.jpg",
-      linkPage: "/lezardrieux.html",
+      linkPage: "/lezardrieux",
     },
     {
       id: 2,
       title: "Niçoise en costume local",
       artist: "Berthe Morisot",
       image: "./nicosie.jpg",
-      linkPage: "/nicoise.html",
+      linkPage: "/nicoise",
     },
     {
       id: 3,
       title: "Absolute Dilemma",
       artist: "Jason Balducci",
       image: "./absolute-dilemma.jpeg",
-      linkPage: "/absolute-dilemma.html",
+      linkPage: "/absolute-dilemma",
     },
-     {
-       id: 4,
-       title: "Appropriazione La Dama con l'Ermellino",
-       artist: "Enzo Fiore",
-       image: "./appropriazione.png",
-       linkPage: "/appropriazione.html",
-     },
+    {
+      id: 4,
+      title: "Appropriazione La Dama con l'Ermellino",
+      artist: "Enzo Fiore",
+      image: "./appropriazione.png",
+      linkPage: "/appropriazione",
+    },
   ];
 
   return (
@@ -65,8 +65,9 @@ export default function Home() {
         <div className="grid grid-cols-1 pt-4 mx-auto gap-y-8 lg:grid-cols-3 sm:gap-6 lg:gap-10">
           {operas.map((opera) => (
             <div key={opera.id}>
-              <a 
-              href={opera.linkPage}>
+              <a
+                href={`https://artworks-aesthetes-clone.vercel.app ${opera.linkPage}`}
+              >
                 <img
                   src={opera.image}
                   className="object-cover mx-auto border border-black rounded-lg cursor-pointer w-60 lg:w-80 lg:h-80 xl:w-96 xl:h-96 h-60"
@@ -75,7 +76,10 @@ export default function Home() {
               <div className="flex flex-col justify-between pt-4 tracking-wider text-center">
                 <p className="sm:text-xl">{opera.artist}</p>
                 <p className="font-bold sm:text-xl">{opera.title}</p>
-                <a href={opera.linkPage}>
+                <a
+                  href={`https://artworks-aesthetes-clone.vercel.app ${opera.linkPage}`}
+                >
+                  {" "}
                   <p className="py-2 mt-4 tracking-widest border border-white rounded-full cursor-pointer hover:underline">
                     Details
                   </p>
