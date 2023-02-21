@@ -65,14 +65,14 @@ export default function Home() {
         <div className="grid grid-cols-1 pt-4 mx-auto gap-y-8 lg:grid-cols-3 sm:gap-6 lg:gap-10">
           {operas.map((opera) => (
             <div key={opera.id}>
-              <a
-                href={`https://artworks-aesthetes-clone.vercel.app${opera.linkPage}`}
+              <Link href={opera.linkPage}
               >
                 <img
                   src={opera.image}
                   className="object-cover mx-auto border border-black rounded-lg cursor-pointer w-60 lg:w-80 lg:h-80 xl:w-96 xl:h-96 h-60"
                 />
-              </a>
+              
+              </Link>
               <div className="flex flex-col justify-between pt-4 tracking-wider text-center">
                 <p className="sm:text-xl">{opera.artist}</p>
                 <p className="font-bold sm:text-xl">{opera.title}</p>
