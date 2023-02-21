@@ -76,14 +76,13 @@ export default function Home() {
               <div className="flex flex-col justify-between pt-4 tracking-wider text-center">
                 <p className="sm:text-xl">{opera.artist}</p>
                 <p className="font-bold sm:text-xl">{opera.title}</p>
-                <a
-                  href={`https://artworks-aesthetes-clone.vercel.app${opera.linkPage}`}
-                >
+                 <Link href={opera.linkPage}
+              >
                   {" "}
                   <p className="py-2 mt-4 tracking-widest border border-white rounded-full cursor-pointer hover:underline">
                     Details
                   </p>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
